@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #222;
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
+    animation: fade-in 1s ease-in-out;
+}
+
+p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #444;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
+    animation: fade-in 1s ease-in-out;
+}
+
+.faces {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    animation: slide-up 1s ease-in-out;
+}
+
+.face {
+    font-size: 4rem;
+    padding: 20px;
+    border-radius: 50%;
+    margin: 0 30px;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    animation:
+        fade-in 1s ease-in-out,
+        move-right 1s ease-in-out;
+}
+
+.face:hover {
+    transform: scale(1.1);
+}
+
+.happy {
+    background-color: #26f749;
+}
+
+.normal {
+    background-color: #ffc107;
+}
+
+.sad {
+    background-color: #f44336;
+}
+
+.emoji {
+    display: block;
+}
+
+.counters {
+    display: flex;
+    justify-content: center;
+    animation: slide-up 1s ease-in-out;
+}
+
+.counter {
+    font-size: 1.2rem;
+    color: #444;
+    margin: 0 20px;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
+    animation: fade-in 1s ease-in-out;
+}
+
+/* Keyframe animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes move-right {
+    from {
+        transform: translateX(-100px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Responsive styles */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .faces {
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    .face {
+        margin: 10px;
+        font-size: 3rem;
+    }
+
+    .counters {
+        flex-direction: column;
+    }
+
+    .counter {
+        margin: 10px 0;
+    }
+}

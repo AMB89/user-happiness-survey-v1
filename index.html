@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <title>قياس سعادة المستخدمين</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h1>قياس سعادة المستخدمين</h1>
+    <p>:اختر وجهًا لتعبر عن مزاجك</p>
+    <div class="faces">
+      <button class="face happy" onclick="incrementCounter('happy')">
+        <span class="emoji">😊</span>
+      </button>
+      <button class="face normal" onclick="incrementCounter('normal')">
+        <span class="emoji">😐</span>
+      </button>
+      <button class="face sad" onclick="incrementCounter('sad')">
+        <span class="emoji">😔</span>
+      </button>
+    </div>
+    <p>:عدد المستخدمين الذين اختاروا كل وجه</p>
+    <div class="counters">
+      <div class="counter happy">
+        مستخدم <span id="happy-counter">0</span> 
+      </div>
+      <div class="counter normal">
+        مستخدم <span id="normal-counter">0</span> 
+      </div>
+      <div class="counter sad">
+        مستخدم <span id="sad-counter">0</span> 
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
